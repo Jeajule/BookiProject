@@ -1,0 +1,828 @@
+
+/******************************************
+*** Fichier CSS projet 2 OpenClassrooms ***
+***         JEANNEROD JULIEN            ***
+*******************************************/
+
+/******************************************
+***                Globlal              ***
+*******************************************/
+
+
+/* déclarations flexbox pour utilisation globale */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+
+
+.margin-txt
+{
+   margin: 25px 0px 25px 0px;
+}
+
+
+.flexCenter{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+.flexAround{
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+}
+
+.flexBetween{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+
+.align-items-Center
+{
+    display: flex;
+    align-items: center;
+}
+
+.test{
+    display: flex;
+}
+
+.flex{
+    display: flex;
+}
+
+body /* enleve les marges du coprs et definit la prise en compte d'un container fils dans un container parent*/
+{
+
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+main, footer
+{
+    max-width: 1440px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 0px 20px 20px 20px;
+}
+
+
+a /* supprime aspect esthetique des liens "a" */
+{
+ text-decoration: none;
+ color: inherit;
+}
+
+h1 {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+h2
+{
+    font-size: large;
+    font-weight:normal;
+}
+
+h3
+{
+    font-size: small;
+}
+
+
+/* header */
+
+header
+{
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.logo /* Definit lataille du logo */
+{
+    width: 130px;
+    height: 50px;
+}
+
+nav
+{
+    width: 500px;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+nav li /* enlever les puces de la liste à puce */
+{
+    list-style-type:none;
+    height: 99px;
+    width: 50%;
+}
+
+nav li:hover /* bordure sur li nav au survol */
+{
+    border-top: 4px solid #0065FC;
+}
+
+li a:hover /* Changement de couleur sur li nav au survol */
+{
+    color: #0065FC;
+}
+
+
+.colorGris /* Etablit la couleur grise */
+{
+color: rgb(34, 32, 32);
+}
+
+/******************************************
+***               Formulaire            ***
+*******************************************/
+
+
+
+.boxMarker /* Etablit les propriétés de la boite du marqueur */
+{
+    
+    background-color: #f2f2f2;
+    width: 50px;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar /* Etablit les propriétés de la boite du formulaire*/
+{
+    height: 50px;
+}
+
+.searchField /* Etablit les propriétés du champ de recherche du formulaire*/
+{
+    border: 1px solid #f2f2f2;
+    padding-left:  15px;
+    font-size: 15px;
+    font-weight:bold;
+    width: 250px;   
+
+}
+
+.searchButton /* Etablit les propriétés du boutton du formulaire*/
+{
+    background-color: #0065FC;
+    width: 150px;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
+    
+}
+
+.searchButton:hover /* établit les propriétés du champs au survol de la souris */
+{
+    background-color: #deebff;
+}
+
+.searchButton:hover >.searchText /* établit les propriétés du texte, champs fils, au survol de la souris sur Champs pere */
+{
+    color: #0065FC;
+}
+
+.searchText /* Etablit les propriétés du texte "rechercher" du formulaire*/
+{
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+
+}
+
+.magnifyingGlass /* fait disparaitre la loupe en affichage ordi */
+{
+display: none;
+}
+
+
+/******************************************
+***                Filtres              ***
+*******************************************/
+
+
+.filtTitle
+{
+    font-weight: bold;
+    margin-bottom: 20px;
+   
+}
+
+
+
+.boxFiltTxtIcon /* Etablit les propriétés de la boite de chaque filtre */
+{
+    border: 2px solid #f2f2f2;
+    height: 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 20px;  
+}
+
+
+
+.boxFiltIcon /* Etablit les propriétés de la boite de l'icone des filtres */
+{
+   
+    color: #0065FC;
+    background-color: #deebff;
+    width: 42px;
+    height: 42px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtText /* établit les propriétés du texte de chaque filtre */
+{
+    padding-left: 15px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.boxFiltTxtIcon:hover > .boxFiltIcon  /* établit les propriétés de l'icone, champs fils, au survol de la souris sur Champs pere */
+{
+    color: #deebff;
+    background-color: #0065FC;
+}
+
+.boxFiltTxtIcon:hover > .filtText /* établit les propriétés du texte, champs fils, au survol de la souris sur Champs pere */
+{
+    color: #0065FC;
+}
+
+.boxInfoTxt
+{
+    display: flex;
+    align-items: center;
+}
+
+.boxInfo
+{
+    color: #0065FC;
+    border: 2px solid #deebff;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+      
+}
+
+.infoTxt
+{
+    padding-left: 15px;
+}
+
+
+/******************************************
+***              Hébergements           ***
+*******************************************/
+
+.hebergement
+{
+    display: flex;
+    justify-content:space-between;
+}
+
+
+.hebergement section
+{
+    background-color: #f2f2f2;
+    padding: 20px 20px 10px 20px;
+    border-radius: 20px;
+    box-sizing: content-box;
+}
+
+.card-Ville:hover, .card-Populaire:hover, .shaping-card-activities:hover
+{
+
+    box-shadow: black 0 0 15px;
+    transform: scale(1.03);
+    transition: .3s;
+}
+
+
+.container-Hebergement
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+.fa-star
+{
+    font-size: .8rem;
+}
+
+.blueStar{
+    color: #0065FC;
+}
+
+.greyStar{
+    color: #f2f2f2;
+}
+
+.pad-Bott-10
+{
+    margin: 0; 
+    padding-bottom: 10px;
+}
+
+.noMargNoPad
+{
+    margin: 0; 
+    padding: 0;
+}
+
+
+.fontMedBlod 
+{
+   font-size: medium;
+    font-weight: bold;
+
+}
+
+.fontSmall
+{
+   font-size: small;
+}
+
+.hebergement section h2 a:hover
+{
+    color: #0065FC;
+ }
+
+    /********************************
+    ***           Villes          ***
+    *********************************/        
+
+    .ville
+    {
+    width: 60%;
+    }
+
+    .card-Ville
+    {
+        width: 30%;
+        max-width: 350px;
+        margin-bottom: 20px;
+        background-color: white;
+        padding: 4px;
+        border-radius: 10px;
+        height: 100%;
+        box-shadow: 0px 10px 10px 0px #9f9d9d;
+    }
+
+
+    .img-Ville
+    {
+        width: 100%;
+        height: 90px;
+        border-radius: 10px 10px 0px 0px;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+    }
+
+    /********************************
+    ***         populaire         ***
+    *********************************/        
+
+    .populaire
+    {
+    width: 30%;
+    position: relative;
+    }
+
+
+    .icon-Chart-line
+    {
+        position: absolute;
+        top: 40px;
+        right: 20px;
+    }
+
+    .container-Hebergement .populaire
+    {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .img-Populaire
+    {
+        width: 35%;
+        height: 120px;
+        border-radius: 10px 0px 0px 10px;
+        object-fit: cover;
+    }   
+
+
+
+    .card-Populaire
+    {
+        width: 100%;
+        margin: 0px 30px 30px 30px;
+        background-color: white;
+        padding: 4px;
+        border-radius: 10px;
+        height: 100%;
+        box-shadow: 0px 10px 10px 0px #9f9d9d;
+
+    }
+
+    .card-Populaire a {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .wording-Hebergement
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 10px 10px 0px 10px;
+        width: 60%;
+    }
+
+
+/******************************************
+***               Activités             ***
+*******************************************/
+
+.activites
+{
+   margin-top: 50px;
+    
+}
+
+.city-activities
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0px 25px 0px ;
+    height: 500px;
+
+}
+
+.card-activity
+{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.card-Img-Activity
+{
+
+    width: 100%;
+    height: calc(100% - 50px);
+    border-radius: 25px 25px 0px 0px;
+    object-fit: cover;
+ }
+
+.two-activities .card-activity-middle
+{
+
+    height: 37%;
+   
+ }  
+
+ .two-activities .card-activity-short
+ {
+ 
+     height: 57%;
+    
+  }
+
+ .shaping-card-activities 
+ {
+     box-shadow: 0px 0px 10px 0px #E0E0E0;
+     border-radius: 25px;
+     
+  }
+
+
+
+ .Txt-activity
+ {
+    padding-left : 20px;
+ }
+
+
+
+
+/************************************
+*              Footer               *
+************************************/
+
+
+
+footer {
+    background-color: #f2f2f2;
+}
+
+.card-footer
+{
+    width: 30%;
+}
+
+footer li /* enlever les puces de la liste à puce */
+{
+    list-style-type:none;
+    padding-bottom: 20px;
+    
+}
+
+
+
+/******************************************
+***               Tablette              ***
+*******************************************/
+
+
+@media only screen and (max-width: 992px)
+{
+
+    .filter {
+        flex-wrap: wrap;
+    }
+
+   
+
+    .hebergement {
+        flex-direction: column;
+    }
+
+    .ville{
+        order: 2;
+    }
+
+    .populaire {
+        order: 1;
+    }
+
+    .ville, .populaire{
+        width: 95%;
+        margin-bottom: 20px;   
+    }
+
+    .populaire .container-Hebergement 
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .card-Populaire
+    {
+        max-width: 350px;
+        margin: 0px 0px 20px 0px ;
+
+    }
+
+    footer {
+        justify-content: space-between;
+    }
+
+    .card-footer{
+        width: auto;
+    }
+
+}
+
+/******************************************
+***              Smartphone          ***
+*******************************************/
+
+
+@media only screen and (max-width: 768px)
+{
+    
+    header {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+
+    nav /* Etablit une largeur de 50% par rappot au conteiner parent ( ici header) */
+    {
+        width: 100%;
+    }
+
+
+    nav li:hover
+    {
+        border-bottom: 2px solid #0065FC;
+        border-top: inherit;
+    }
+
+   
+
+    nav li
+    {
+        width: 50%;
+        text-align: center;
+        border-bottom: 3px solid #f2f2f2;
+    }
+
+/******************************************
+***              SP Formulaire          ***
+*******************************************/
+
+
+    .magnifyingGlass /* fait apparaitre la loupe */
+    {
+    display:inline-block;
+    }
+
+    .searchText /* fait disparaitre le texte "rechercher" du formulaire*/
+    {
+        display: none;
+    }
+
+    .searchField /* Etablit les propriétés du champ de recherche du formulaire*/
+    {
+    
+        border-radius: 0px 15px 15px 0px;
+        
+    }
+
+    .searchButton /* Etablit les propriétés du boutton du formulaire*/
+    {
+        background-color: #0065FC;
+        width: 50px;
+        border-radius: 15px 15px 15px 15px;
+        border: none;
+        color: white;
+
+    }
+
+/******************************************
+***               SP Filtres            ***
+*******************************************/
+    .filter 
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+/******************************************
+***            SP Hébergements          ***
+*******************************************/    
+
+
+.hebergement section
+{
+    padding: 5px 5px 5px 5px;   
+}
+
+main
+{
+    padding: 0;
+}
+
+
+main section
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.icon-Chart-line {
+    top: 30px; 
+}
+
+
+.ville{
+    order: 2;
+}
+
+.hebergement .populaire
+{
+    border-radius: 0px;
+    box-sizing: content-box;
+
+}
+
+.hebergement .ville
+{
+
+  
+    background-color: inherit;
+}
+
+.populaire {
+    order: 1;
+}
+
+.container-Hebergement {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+
+.card-Ville{
+    width: 100%;
+    height: 210px;
+}
+
+.img-Ville{
+    height: 120px;
+}
+
+
+.card-Populaire a{
+    height: 150px;
+}
+
+.img-Populaire
+    {
+        height: 100%;
+    }  
+    
+    
+  
+
+
+/******************************************
+***            SP Activités             ***
+*******************************************/    
+    
+    .city-activities
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        height: inherit;
+        
+    }
+    
+    .card-activity 
+    {
+        margin-bottom: 25px;
+        width: 100%;
+        
+    }
+
+  
+
+    .shaping-card-activities, .two-activities .shaping-card-activities
+    {
+        
+        height: 210px;
+        margin-bottom: 20px;
+        max-width: 350px;
+    }
+
+
+
+/******************************************
+***              SP Footer              ***
+*******************************************/  
+
+
+
+    footer {
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+    
+
+
+
+
+
